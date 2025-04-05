@@ -1,7 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-import logic.random as rndm
+import logic.rndm as rndm
 
 class coinflipCog(commands.Cog):
     def __init__(self, bot):

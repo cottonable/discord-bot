@@ -17,6 +17,7 @@ class prototype(commands.Bot):
 
 bot = prototype()
 
+# what the bot does on start
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="with nuclear bombs :3"))
@@ -25,14 +26,20 @@ async def on_ready():
     print('All cogs loaded successfully!')
     await bot.tree.sync()
 
+# loading commands (folder.filename)
 async def load_cogs():
-    await bot.load_extension('commands.songlink')
+    await bot.load_extension('commands.odesli')
     await bot.load_extension('commands.ping')
     await bot.load_extension('commands.catfact')
     await bot.load_extension('commands.coinflip')
     await bot.load_extension('commands.randomnr')
     await bot.load_extension('commands.mock')
+    await bot.load_extension('commands.say')
+    await bot.load_extension('commands.8ball')
+    await bot.load_extension('commands.freaky')
 
+# token thingy
+print('IM AWAKEEEEEEE')
+print('paste the token in and click enter in case the message wont show')
 bot_tokennnnn = getpass.getpass("paste in the bot token u goober (it wont show to prevent oopsies)")
-
 bot.run(bot_tokennnnn)

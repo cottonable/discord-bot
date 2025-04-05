@@ -19,7 +19,7 @@ def cat_emoji():
 def cat_fact():
     facts = [
         "the oldest known pet cat existed 9,500 years ago",
-        "cats spend 70% of their lives sleeping, according to [Veterinary Hub](<https://veterinaryhub.com/cats-spend-70-of-their-lives-asleep/>)",
+        "cats spend 70% of their lives sleeping",
         "the richest cat in the world had £7 million",
         "a cat named Stubby was the mayor of an alaskan town for 20 years",
         "the record for the longest cat ever is 48.5 inches",
@@ -46,3 +46,19 @@ def random_number(fromnr, tonr):
     result = random.randrange(fromnr, tonr + 1)
     print(result)
     return result
+
+def ball_responses(question):
+    responses = [":8ball: yes", 
+                 ":8ball: no", 
+                 ":8ball: dont count on it", 
+                 ":8ball: maybe", 
+                 ":8ball: idk man", 
+                 ":8ball: absolutely not", 
+                 ":8ball: too lazy try again later", 
+                 ":8ball: meowmeowmeowmeowmeow", 
+                 ":8ball: why", 
+                 ":8ball: i doubt it", 
+                 ":8ball: *the ball fell on the ground and broke*"]
+    random_response = random.choice(responses)
+    make_msg = f"{question}\n{random_response}"
+    return make_msg
