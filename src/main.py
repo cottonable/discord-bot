@@ -37,6 +37,7 @@ async def load_cogs():
     await bot.load_extension('commands.say')
     await bot.load_extension('commands.8ball')
     await bot.load_extension('commands.freaky')
+    await bot.load_extension('commands.remind')
 
 # token thingy
 print('IM AWAKEEEEEEE')
